@@ -12,11 +12,14 @@
 
 // node express
 require('dotenv').config()
+const cors = require('cors')
 const { response, request } = require("express")
 const express = require("express")
 const fruits = require("./fruit")
 const app = express()
 const port = process.env.PORT
+
+app.use(cors())
 app.use(express.json())
 
 //Routes
